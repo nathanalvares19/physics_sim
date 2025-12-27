@@ -51,3 +51,7 @@ Expected:
 ```bash
 ./main
 ```
+
+## Resources
+
+https://www.raylib.com/examples.html
