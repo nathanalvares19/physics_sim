@@ -71,3 +71,8 @@ struct Vec2
         return Vec2(x / len, y / len);
     }
 };
+
+inline Vec2 operator*(float s, const Vec2 &v)
+{
+    return {v.x * s, v.y * s};
+}
