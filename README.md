@@ -52,6 +52,8 @@ Expected:
 ./main
 ```
 
+---
+
 ## Resources
 
 https://www.raylib.com/examples.html
