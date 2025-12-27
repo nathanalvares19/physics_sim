@@ -16,8 +16,6 @@ Open **MSYS2 MinGW64** and run:
 pacman -S mingw-w64-x86_64-raylib
 ```
 
-````
-
 Verify:
 
 ```bash
@@ -53,4 +51,3 @@ Expected:
 ```bash
 ./main
 ```
-````
