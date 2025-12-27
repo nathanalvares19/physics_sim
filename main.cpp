@@ -1,49 +1,4 @@
-// #include "raylib.h"
-
-// #include "math/vec2.h"
-// #include "physics/body.h"
-// #include "physics/world.h"
-
-// int main()
-// {
-//     InitWindow(800, 600, "2D Physics Engine");
-//     SetTargetFPS(60);
-
-//     World world;
-
-//     Body ground(Vec2(400.0f, 580.0f), 100.0f, 0.0f);
-//     Body ball(Vec2(400.0f, 100.0f), 20.0f, 1.0f);
-
-//     world.addBody(&ground);
-//     world.addBody(&ball);
-
-//     const float dt = 1.0f / 60.0f;
-
-//     while (!WindowShouldClose())
-//     {
-//         world.step(dt);
-
-//         BeginDrawing();
-//         ClearBackground(BLACK);
-
-//         for (Body *body : world.bodies)
-//         {
-//             DrawCircle(
-//                 (int)body->position.x,
-//                 (int)body->position.y,
-//                 body->radius,
-//                 WHITE);
-//         }
-
-//         EndDrawing();
-//     }
-
-//     CloseWindow();
-//     return 0;
-// }
-
 #include "raylib.h"
-
 #include "math/vec2.h"
 #include "physics/body.h"
 #include "physics/world.h"
@@ -58,7 +13,6 @@ int main()
 
     World world;
 
-    // --- Wall setup (static rectangles) ---
     const float WALL_THICKNESS = 10.0f;
 
     Body bottomWall(
@@ -100,24 +54,13 @@ int main()
     world.addBody(&heavyBall);
 
     const float dt = 1.0f / 60.0f;
-    bool paused = false;
 
     while (!WindowShouldClose())
     {
+        world.step(dt);
 
-        // --- Controls ---
-        if (IsKeyPressed(KEY_P))
-            paused = !paused;
-
-        // --- Physics ---
-        if (!paused)
-            world.step(dt);
-
-        // --- Rendering ---
         BeginDrawing();
         ClearBackground(BLACK);
-
-        DrawText("P = Pause / Resume", 10, 10, 20, GRAY);
 
         for (Body *body : world.bodies)
         {
