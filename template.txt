@@ -1,0 +1,27 @@
+#include "raylib.h"
+#include "math/vec2.h"
+#include "physics/body.h"
+#include "physics/world.h"
+
+int main()
+{
+    // window initialisation
+    const int screenWidth = 800;
+    const int screenHeight = 450;
+    InitWindow(screenWidth, screenHeight, "Nathan's Window");
+    SetTargetFPS(60);
+
+    // scene setup
+
+    // main game loop
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
+        ClearBackground(WHITE);
+        EndDrawing();
+    }
+
+    CloseWindow();
+
+    return 0;
+}
