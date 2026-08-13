@@ -1,4 +1,5 @@
-# Instructions
+# Physics Simulator
+A simple implementation of a physics simulator in C++
 
 ## Requirements
 
