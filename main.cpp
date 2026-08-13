@@ -1,24 +1,22 @@
 #include <iostream>
-#include <string>
 #include "raylib.h"
 #include "raymath.h"
+#include "window.h"
 
 int main()
 {
-    // window settings
-    int windowWidth = 1000;
-    int windowHeight = 500;
-    std::string windowTitle = "Nathan";
-    int windowFPS = 60;
+    // create a window
+    Window window(1000, 500, "Nathan", 60);
 
-    InitWindow(windowWidth, windowHeight, windowTitle.c_str());
-    SetTargetFPS(windowFPS);
+    // initialize window
+    window.init_window();
 
+    // drawing loop
     while (!WindowShouldClose())
     {
         BeginDrawing();
 
-        ClearBackground(RAYWHITE);
+        ClearBackground(LIME);
 
         int posX = windowWidth / 2;
         int posY = windowHeight / 2;
@@ -31,7 +29,8 @@ int main()
         EndDrawing();
     }
 
-    CloseWindow();
+    // close window
+    window.close_window();
 
     return 0;
 }
