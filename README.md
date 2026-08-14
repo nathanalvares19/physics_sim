@@ -1,4 +1,5 @@
 # Physics Simulator
+
 A simple implementation of a physics simulator in C++
 
 ## Requirements
@@ -25,38 +26,12 @@ ls /mingw64/include/raylib.h
 
 ---
 
-## Compile
-
-From the project directory:
-
-```bash
-g++ main.cpp -o main -lraylib
-```
-
-Ensure the correct compiler:
-
-```bash
-which g++
-```
-
-Expected:
-
-```
-/mingw64/bin/g++
-```
-
----
-
-## Run
-
-```bash
-./main
-```
-
 ---
 
 ## Resources
 
-https://www.raylib.com/examples.html
+- [Raylib Examples](https://www.raylib.com/examples.html)
 
-https://www.raylib.com/cheatsheet/cheatsheet.html
+- [Raylib Functions](https://www.raylib.com/cheatsheet/cheatsheet.html)
+
+- [Verlet Integration for Kinematics Simulation](https://www.wikiwand.com/en/Verlet_integration)
