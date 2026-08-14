@@ -2,19 +2,14 @@
 #include "raylib.h"
 
 // window constructor
-Window::Window(int w, int h, std::string title, int fps) : Width(w), Height(h), windowTitle(title), windowFPS(fps)
+Window::Window(int w, int h, std::string title, int fps) : width(w), height(h), title(title), fps(fps)
 {
+    InitWindow(this->width, this->height, this->title.c_str());
+    SetTargetFPS(this->fps);
 }
 
 // initialize window
-void Window::init_window(void)
-{
-    InitWindow(Width, Height, windowTitle.c_str());
-    SetTargetFPS(windowFPS);
-}
-
-// initialize window
-void Window::close_window(void)
+void Window::close(void)
 {
     CloseWindow();
 }

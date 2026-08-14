@@ -6,18 +6,12 @@
 class Window
 {
 public:
-    // window props
-    int Width;
-    int Height;
-    std::string windowTitle;
-    int windowFPS;
+    int width;
+    int height;
+    std::string title;
+    int fps;
 
-    // window constructor
     Window(int w, int h, std::string title, int fps);
 
-    // initialize window
-    void init_window(void);
-
-    // close window
-    void close_window(void);
+    void close(void);
 };
