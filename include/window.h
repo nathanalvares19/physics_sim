@@ -7,12 +7,11 @@ class Window
 {
 public:
     // window props
-    int windowWidth;
-    int windowHeight;
+    int Width;
+    int Height;
     std::string windowTitle;
     int windowFPS;
 
-public:
     // window constructor
     Window(int w, int h, std::string title, int fps);
 
