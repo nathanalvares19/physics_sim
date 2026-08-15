@@ -1,7 +1,7 @@
 #include "globals.h"
 #include "window.h"
 
-Window window(800, 800, "The Matrix", 120);
+Window window(1000, 1000, "The Matrix", 120);
 
 // time interval
 double dt = 0.05;
@@ -17,7 +17,7 @@ double width = 50;
 double height = 50;
 
 // circle dimensions
-double radius = 35;
+double radius = 10;
 
 // max speed
 double max_speed = 200;

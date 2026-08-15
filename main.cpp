@@ -10,7 +10,7 @@
 int main()
 {
     // create bodies at random positions
-    int num_of_bodies = 10;
+    int num_of_bodies = 100;
     std::vector<Vec2> initial_positions;
     for (int i = 0; i < num_of_bodies; i++)
     {
