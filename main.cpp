@@ -10,7 +10,7 @@
 int main()
 {
     // create bodies at random positions
-    int num_of_bodies = 3;
+    int num_of_bodies = 10;
     std::vector<Vec2> initial_positions;
     for (int i = 0; i < num_of_bodies; i++)
     {
@@ -31,7 +31,7 @@ int main()
         double mass = 1;
         Vec2 pos = {initial_positions[i].x, initial_positions[i].y};
         Vec2 vel = {initial_velocities[i].x, initial_velocities[i].y};
-        Body body(mass, pos, vel);
+        Body body(mass, pos, vel, {0, g});
         scene1.add_body(body);
     }
 
@@ -48,6 +48,8 @@ int main()
             scene1.bodies[i].move();
             DrawCircle(scene1.bodies[i].position.x, scene1.bodies[i].position.y, radius, RED);
         }
+
+        scene1.check_collisions();
 
         // end drawing
         EndDrawing();

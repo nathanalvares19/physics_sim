@@ -8,6 +8,5 @@ public:
 
     Vec2(double x, double y);
 
-    Vec2 operator+(Vec2 other);
-    Vec2 operator-(Vec2 other);
+    double dot(Vec2);
 };

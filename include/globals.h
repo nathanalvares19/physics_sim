@@ -5,6 +5,7 @@ extern Window window;
 
 extern double dt;
 extern double g;
+extern double e;
 
 extern double width;
 extern double height;
