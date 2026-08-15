@@ -1,4 +1,4 @@
-#include "vector.h"
+#include "vector2.h"
 
 // vector constructor
 Vec2::Vec2(double x, double y) : x(x), y(y) {}

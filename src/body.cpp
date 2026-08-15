@@ -15,6 +15,9 @@ Body::Body(double m) : mass(m), position({0, 0}), velocity({0, 0}), force({0, 0}
 // body constructor (mass and position)
 Body::Body(double m, Vec2 p) : mass(m), position(p), velocity({0, 0}), force({0, 0}), acceleration({0, g}) {}
 
+// body constructor (mass, position, velocity)
+Body::Body(double m, Vec2 p, Vec2 v) : mass(m), position(p), velocity(v), force({0, 0}), acceleration({0, g}) {}
+
 // update body state
 void Body::move()
 {

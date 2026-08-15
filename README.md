@@ -34,4 +34,6 @@ ls /mingw64/include/raylib.h
 
 - [Raylib Functions](https://www.raylib.com/cheatsheet/cheatsheet.html)
 
-- [Verlet Integration for Kinematics Simulation](https://www.wikiwand.com/en/Verlet_integration)
+- [Verlet Integration for Kinematics Simulation](https://www.youtube.com/watch?v=3HjO_RGIjCU)
+
+- [Allen Chou Blog](https://allenchou.net/game-physics-series/)

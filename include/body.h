@@ -1,7 +1,7 @@
 #pragma once
 
 #include "raylib.h"
-#include "vector.h"
+#include "vector2.h"
 
 class Body
 {
@@ -15,6 +15,7 @@ public:
     Body(double m, Vec2 p, Vec2 v, Vec2 F);
     Body(double m);
     Body(double m, Vec2 p);
+    Body(double m, Vec2 p, Vec2 v);
 
     void move();
 };
