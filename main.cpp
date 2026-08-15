@@ -4,18 +4,12 @@
 #include "raymath.h"
 #include "window.h"
 #include "body.h"
-
-// rectangle dimensions
-double width = 300;
-double height = 100;
+#include "globals.h"
 
 int main()
 {
-    // create window
-    Window window(1000, 500, "Nathan", 30);
-
     // create body
-    Body body(window.width / 2, height / 2, 0);
+    Body body(1, {static_cast<double>(window.width) / 2, height / 2 + 100});
 
     // drawing scene
     while (!WindowShouldClose())
@@ -24,19 +18,11 @@ int main()
         BeginDrawing();
         ClearBackground(WHITE);
 
-        // reset logic
-        if (IsKeyPressed(KEY_R))
-        {
-            body.y = 0;
-            body.velocity = 0;
-            DrawRectangle(body.x - width / 2, body.y - height / 2, width, height, RED);
-        }
-        else
-        {
-            // main drawing logic
-            DrawRectangle(body.x - width / 2, body.y - height / 2, width, height, RED);
-            body.move();
-        }
+        DrawLineV({0, static_cast<float>(height / 2 + 100 - height / 2)}, {static_cast<float>(window.width), static_cast<float>(height / 2 + 100 - height / 2)}, BLACK);
+
+        // main drawing logic
+        body.move();
+        DrawRectangle(body.position.x - width / 2, body.position.y - height / 2, width, height, RED);
 
         // end drawing
         EndDrawing();

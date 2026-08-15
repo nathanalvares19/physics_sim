@@ -1,4 +1,10 @@
 #pragma once
 
-double dt;
-double g;
+class Window;
+extern Window window;
+
+extern double dt;
+extern double g;
+
+extern double width;
+extern double height;
