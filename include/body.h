@@ -1,13 +1,20 @@
 #pragma once
 
+#include "raylib.h"
+#include "vector.h"
+
 class Body
 {
 public:
-    double x;
-    double y;
-    double velocity;
+    double mass;
+    Vec2 position; // COM position
+    Vec2 velocity;
+    Vec2 force; // apart from gravity
+    Vec2 acceleration;
 
-    Body(double xi, double yi, double v);
+    Body(double m, Vec2 p, Vec2 v, Vec2 F);
+    Body(double m);
+    Body(double m, Vec2 p);
 
     void move();
 };
