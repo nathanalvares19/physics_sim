@@ -27,6 +27,12 @@ void Body::move()
     velocity.y = velocity.y + acceleration.y * dt;
 
     // boundary check (window)
+    check_bounds_circle(position, velocity);
+}
+
+// boundary checker (rectangle)
+void check_bounds_rect(Vec2 &position, Vec2 &velocity)
+{
     if (position.y + height / 2 > window.height)
     {
         position.y = window.height - height / 2;
@@ -48,6 +54,34 @@ void Body::move()
     if (position.x - width / 2 < 0)
     {
         position.x = width / 2;
+        velocity.x *= -1;
+    }
+}
+
+// boundary checker (circle)
+void check_bounds_circle(Vec2 &position, Vec2 &velocity)
+{
+    if (position.y + radius > window.height)
+    {
+        position.y = window.height - radius;
+        velocity.y *= -1;
+    }
+
+    if (position.y - radius < 0)
+    {
+        position.y = radius;
+        velocity.y *= -1;
+    }
+
+    if (position.x + radius > window.width)
+    {
+        position.x = window.width - radius;
+        velocity.x *= -1;
+    }
+
+    if (position.x - radius < 0)
+    {
+        position.x = radius;
         velocity.x *= -1;
     }
 }

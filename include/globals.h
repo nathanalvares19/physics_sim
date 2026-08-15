@@ -8,3 +8,4 @@ extern double g;
 
 extern double width;
 extern double height;
+extern double radius;

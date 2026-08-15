@@ -18,3 +18,6 @@ public:
 
     void move();
 };
+
+void check_bounds_rect(Vec2 &p, Vec2 &v);
+void check_bounds_circle(Vec2 &p, Vec2 &v);
